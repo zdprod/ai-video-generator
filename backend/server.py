@@ -13,6 +13,7 @@ from datetime import datetime
 import shutil
 import asyncio
 import random
+from api_runway import router as runway_router
 
 ROOT_DIR = Path(__file__).parent
 load_dotenv(ROOT_DIR / '.env')
@@ -24,6 +25,7 @@ db = client[os.environ['DB_NAME']]
 
 # Create the main app without a prefix
 app = FastAPI()
+app.include_router(runway_router, prefix="/api/runway")
 
 # Create a router with the /api prefix
 api_router = APIRouter(prefix="/api")
