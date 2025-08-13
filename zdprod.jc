@@ -1,0 +1,19 @@
+# 1. Clone the repository
+git clone https://github.com/yourusername/ai-video-generator.git
+cd ai-video-generator
+
+# 2. Backend setup
+cd backend
+pip install -r requirements.txt
+cp .env.example .env
+# Edit .env with your settings
+uvicorn server:app --host 0.0.0.0 --port 8001 --reload &
+
+# 3. Frontend setup
+cd ../frontend
+yarn install
+cp .env.example .env
+# Edit .env with your settings
+yarn start
+
+# 4. Open http://localhost:3000
