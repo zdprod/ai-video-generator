@@ -125,10 +125,10 @@ The application will automatically create the required MongoDB collections:
 4. Install dependencies:
    ```bash
    # Backend
-   cd backend && pip install -r requirements.txt
+   cd backend 🚀 Features pip install -r requirements.txt
    
    # Frontend
-   cd frontend && yarn install
+   cd frontend 🚀 Features yarn install
    ```
 5. Start both servers (Replit can run multiple processes)
 
